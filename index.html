@@ -243,6 +243,13 @@ footer small{font-family:var(--f-mono);font-size:.68rem;letter-spacing:.08em;col
 .autor{font-family:var(--f-mono);font-size:.8rem;letter-spacing:.08em;color:var(--fg);margin:0}
 .autor a,footer .autor a{font:inherit;letter-spacing:inherit;text-transform:none;color:inherit;text-decoration:underline;text-decoration-color:var(--line);text-underline-offset:4px}
 .autor a:hover{text-decoration-color:currentColor}
+.sellos{display:grid;grid-template-columns:repeat(auto-fit,minmax(18rem,1fr));gap:1px;background:var(--line);border:1px solid var(--line)}
+.sellos>*{background:var(--void);padding:24px;display:grid;gap:12px;align-content:start;min-width:0}
+.huella{font-family:var(--f-mono);font-size:.9rem;line-height:1.5;letter-spacing:.04em;color:var(--fg);overflow-wrap:anywhere;margin:0}
+.sellos .archivo{font-family:var(--f-mono);font-size:.72rem;letter-spacing:.06em;color:var(--muted);overflow-wrap:anywhere;margin:0}
+.sellos h3{font-family:var(--f-mono);font-size:.78rem;letter-spacing:.14em;text-transform:uppercase}
+.sellos ol{margin:0;padding-left:1.2em;display:grid;gap:10px;font-size:.92rem;color:var(--muted)}
+.sellos code{font-family:var(--f-mono);font-size:.82em;color:var(--fg);overflow-wrap:anywhere}
 /* ---------- Galería ---------- */
 .galeria{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:2px;background:var(--line);border:1px solid var(--line)}
 .galeria figure{margin:0;background:var(--void);display:grid;align-content:start}
@@ -595,6 +602,29 @@ footer small{font-family:var(--f-mono);font-size:.68rem;letter-spacing:.08em;col
     <h2 id="h-sobre">Una búsqueda independiente, <span class="ac-cielo">con datos abiertos</span></h2>
     <p>Cielo Austral busca cosas raras en el cielo sur (supernovas, órbitas que no encajan y planetas) con datos públicos de ZTF, Rubin, Gaia y TESS. El método es siempre el mismo: intentar probar que cada señal no es nueva y publicar cada descarte, con los errores incluidos.</p>
     <p class="autor">Nicolás Sifakis · <a href="https://orcid.org/0009-0006-5635-749X" target="_blank" rel="noopener">ORCID 0009-0006-5635-749X</a></p>
+  </div>
+</section>
+
+<section id="sellos" class="bloque wrap" aria-labelledby="h-sellos">
+  <div class="sec-head">
+    <span class="eyebrow">Sellos</span>
+    <h2 id="h-sellos">Predicciones <span class="ac-sn">selladas</span></h2>
+    <p>Cuando tenemos algo que todavía no podemos revelar, guardamos el análisis completo en un archivo y publicamos solo su huella SHA-256. La huella no permite reconstruir el contenido, pero cambia por completo si se toca una sola letra, y queda anclada en la cadena de Bitcoin con OpenTimestamps. Cuando publiquemos el archivo, cualquiera va a poder comprobar que ya lo teníamos en esa fecha.</p>
+  </div>
+  <div class="sellos">
+    <article>
+      <span class="eyebrow"><time datetime="2026-10-17">17 oct 2026</time> · Análisis completo de un candidato reservado</span>
+      <p class="huella">553b8896beef9757ed7de9f240cddc83a656a105de8778d9e3ab2151ed5fdd3c</p>
+      <p class="archivo">Anclada en Bitcoin: bloque 971.910 · 17 oct 2026, 22:19 UTC</p>
+      <p class="archivo">cielo-austral-sello-2026-10-17.zip · se publica cuando se revele el candidato</p>
+    </article>
+    <div>
+      <h3>Cómo verificarlo</h3>
+      <ol>
+        <li>Bajá el archivo cuando lo publiquemos y calculá su huella: <code>shasum -a 256 cielo-austral-sello-2026-10-17.zip</code> en Mac o Linux, o <code>certutil -hashfile cielo-austral-sello-2026-10-17.zip SHA256</code> en Windows. Tiene que dar la misma huella.</li>
+        <li>Para la fecha, arrastrá el archivo y su prueba <code>.ots</code> a <a href="https://opentimestamps.org" target="_blank" rel="noopener">opentimestamps.org</a>: muestra en qué bloque de Bitcoin quedó anotada la huella.</li>
+      </ol>
+    </div>
   </div>
 </section>
 

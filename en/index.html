@@ -243,6 +243,13 @@ footer small{font-family:var(--f-mono);font-size:.68rem;letter-spacing:.08em;col
 .autor{font-family:var(--f-mono);font-size:.8rem;letter-spacing:.08em;color:var(--fg);margin:0}
 .autor a,footer .autor a{font:inherit;letter-spacing:inherit;text-transform:none;color:inherit;text-decoration:underline;text-decoration-color:var(--line);text-underline-offset:4px}
 .autor a:hover{text-decoration-color:currentColor}
+.sellos{display:grid;grid-template-columns:repeat(auto-fit,minmax(18rem,1fr));gap:1px;background:var(--line);border:1px solid var(--line)}
+.sellos>*{background:var(--void);padding:24px;display:grid;gap:12px;align-content:start;min-width:0}
+.huella{font-family:var(--f-mono);font-size:.9rem;line-height:1.5;letter-spacing:.04em;color:var(--fg);overflow-wrap:anywhere;margin:0}
+.sellos .archivo{font-family:var(--f-mono);font-size:.72rem;letter-spacing:.06em;color:var(--muted);overflow-wrap:anywhere;margin:0}
+.sellos h3{font-family:var(--f-mono);font-size:.78rem;letter-spacing:.14em;text-transform:uppercase}
+.sellos ol{margin:0;padding-left:1.2em;display:grid;gap:10px;font-size:.92rem;color:var(--muted)}
+.sellos code{font-family:var(--f-mono);font-size:.82em;color:var(--fg);overflow-wrap:anywhere}
 /* ---------- Galería ---------- */
 .galeria{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:2px;background:var(--line);border:1px solid var(--line)}
 .galeria figure{margin:0;background:var(--void);display:grid;align-content:start}
@@ -595,6 +602,29 @@ footer small{font-family:var(--f-mono);font-size:.68rem;letter-spacing:.08em;col
     <h2 id="h-sobre">An independent search, <span class="ac-cielo">built on open data</span></h2>
     <p>Cielo Austral looks for unusual things in the southern sky (supernovae, orbits that do not fit and planets) using public data from ZTF, Rubin, Gaia and TESS. The method never changes: try to prove that each signal is not new, and publish every rejection, mistakes included.</p>
     <p class="autor">Nicolás Sifakis · <a href="https://orcid.org/0009-0006-5635-749X" target="_blank" rel="noopener">ORCID 0009-0006-5635-749X</a></p>
+  </div>
+</section>
+
+<section id="sellos" class="bloque wrap" aria-labelledby="h-sellos">
+  <div class="sec-head">
+    <span class="eyebrow">Seals</span>
+    <h2 id="h-sellos">Sealed <span class="ac-sn">predictions</span></h2>
+    <p>When we have something we cannot reveal yet, we store the complete analysis in a file and publish only its SHA-256 fingerprint. The fingerprint cannot be used to rebuild the content, but it changes completely if a single letter is touched, and it is anchored in the Bitcoin blockchain with OpenTimestamps. When we publish the file, anyone will be able to check that we already had it on that date.</p>
+  </div>
+  <div class="sellos">
+    <article>
+      <span class="eyebrow"><time datetime="2026-10-17">17 Oct 2026</time> · Complete analysis of a reserved candidate</span>
+      <p class="huella">553b8896beef9757ed7de9f240cddc83a656a105de8778d9e3ab2151ed5fdd3c</p>
+      <p class="archivo">Anchored in Bitcoin: block 971,910 · 17 Oct 2026, 22:19 UTC</p>
+      <p class="archivo">cielo-austral-sello-2026-10-17.zip · to be published when the candidate is revealed</p>
+    </article>
+    <div>
+      <h3>How to verify it</h3>
+      <ol>
+        <li>Download the file once we publish it and compute its fingerprint: <code>shasum -a 256 cielo-austral-sello-2026-10-17.zip</code> on Mac or Linux, or <code>certutil -hashfile cielo-austral-sello-2026-10-17.zip SHA256</code> on Windows. It must give the same fingerprint.</li>
+        <li>For the date, drop the file and its <code>.ots</code> proof on <a href="https://opentimestamps.org" target="_blank" rel="noopener">opentimestamps.org</a>: it shows the Bitcoin block where the fingerprint was recorded.</li>
+      </ol>
+    </div>
   </div>
 </section>
 
