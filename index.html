@@ -240,6 +240,9 @@ footer ul{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;justify
 footer a{font-weight:600;font-size:.72rem;letter-spacing:.18em;text-transform:uppercase;text-decoration:none;color:var(--muted)}
 footer a:hover{color:var(--fg)}
 footer small{font-family:var(--f-mono);font-size:.68rem;letter-spacing:.08em;color:var(--dim);max-width:60ch}
+.autor{font-family:var(--f-mono);font-size:.8rem;letter-spacing:.08em;color:var(--fg);margin:0}
+.autor a,footer .autor a{font:inherit;letter-spacing:inherit;text-transform:none;color:inherit;text-decoration:underline;text-decoration-color:var(--line);text-underline-offset:4px}
+.autor a:hover{text-decoration-color:currentColor}
 /* ---------- Galería ---------- */
 .galeria{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:2px;background:var(--line);border:1px solid var(--line)}
 .galeria figure{margin:0;background:var(--void);display:grid;align-content:start}
@@ -586,6 +589,15 @@ footer small{font-family:var(--f-mono);font-size:.68rem;letter-spacing:.08em;col
   </ol>
 </section>
 
+<section id="sobre" class="bloque wrap" aria-labelledby="h-sobre">
+  <div class="sec-head">
+    <span class="eyebrow">Sobre el proyecto</span>
+    <h2 id="h-sobre">Una búsqueda independiente, <span class="ac-cielo">con datos abiertos</span></h2>
+    <p>Cielo Austral busca cosas raras en el cielo sur (supernovas, órbitas que no encajan y planetas) con datos públicos de ZTF, Rubin, Gaia y TESS. El método es siempre el mismo: intentar probar que cada señal no es nueva y publicar cada descarte, con los errores incluidos.</p>
+    <p class="autor">Nicolás Sifakis · <a href="https://orcid.org/0009-0006-5635-749X" target="_blank" rel="noopener">ORCID 0009-0006-5635-749X</a></p>
+  </div>
+</section>
+
 <section id="datos" class="bloque wrap" aria-labelledby="h-dat">
   <div class="sec-head">
     <span class="eyebrow">Datos y créditos</span>
@@ -625,6 +637,7 @@ fetch("https://cieloaustral.goatcounter.com/counter/TOTAL.json")
 </script>
 
   <ul><li><a href="#observatorio">Observatorio</a></li><li><a href="#candidatos">Candidatos</a></li><li><a href="#diario">Diario</a></li><li><a href="https://alerce.online" target="_blank" rel="noopener">ALeRCE</a></li><li><a href="https://www.wis-tns.org" target="_blank" rel="noopener">TNS</a></li><li><a class="ig" href="https://www.instagram.com/cieloaustral.ar/" target="_blank" rel="noopener"><svg class="ig-ico" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="3" y="3" width="18" height="18" rx="5" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="12" r="4.2" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="17.3" cy="6.7" r="1.3" fill="currentColor"/></svg>Instagram</a></li></ul>
+  <p class="autor">Nicolás Sifakis · <a href="https://orcid.org/0009-0006-5635-749X" target="_blank" rel="noopener">ORCID 0009-0006-5635-749X</a></p>
   <small>Cielo Austral · 2026 · proyecto independiente con asistencia de IA. Los paisajes son ilustraciones generadas por código; las imágenes del telescopio y las estrellas son datos reales. Los objetos listados son candidatos hasta que una confirmación independiente diga lo contrario.</small>
 </footer>
 
