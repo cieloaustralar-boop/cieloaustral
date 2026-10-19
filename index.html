@@ -268,6 +268,9 @@ footer small{font-family:var(--f-mono);font-size:.68rem;letter-spacing:.08em;col
 .modulos-proy .n{font-family:var(--f-mono);font-size:.7rem;letter-spacing:.16em;color:var(--ice)}
 .modulos-proy h3{font-family:var(--f-display);font-size:1.05rem;letter-spacing:.05em;text-transform:uppercase;line-height:1.3}
 .modulos-proy p{color:var(--muted);font-size:.93rem}
+.rondas-pl{grid-template-columns:repeat(4,minmax(0,1fr))}
+@media (max-width:1000px){.rondas-pl{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:560px){.rondas-pl{grid-template-columns:minmax(0,1fr)}}
 .modulos-proy .estado{justify-self:start;font-family:var(--f-mono);font-size:.66rem;letter-spacing:.14em;text-transform:uppercase;padding:4px 9px;border:1px solid currentColor}
 .e-activo{color:var(--conf)} .e-etapa{color:var(--cand)} .e-estudio{color:var(--ice)} .e-pausa{color:var(--dim)}
 
@@ -459,7 +462,7 @@ footer small{font-family:var(--f-mono);font-size:.68rem;letter-spacing:.08em;col
   <div class="modulos-proy">
     <article><span class="n">01</span><h3>Cazador de supernovas</h3><p>Explosiones estelares en el cielo del sur, comparadas con el registro mundial antes de anunciarlas.</p><span class="estado e-activo">Activo</span></article>
     <article><span class="n">02</span><h3>Anomalías orbitales</h3><p>Asteroides y cometas que no están donde dice su órbita. Primero se descartan los errores de observación.</p><span class="estado e-etapa">Etapa 1 lista</span></article>
-    <article><span class="n">03</span><h3>Buscador de planetas</h3><p>Tránsitos de planetas en datos del satélite TESS, alrededor de enanas rojas del sur. Primero tuvo que encontrar solo planetas que ya se conocían.</p><span class="estado e-etapa">Etapa 1 lista</span></article>
+    <article><span class="n">03</span><h3>Buscador de planetas</h3><p>Tránsitos de planetas en datos del satélite TESS, alrededor de enanas rojas del sur. Ya revisó 1.849 y dejó un candidato en verificación; ahora va por 3.462 más.</p><span class="estado e-activo">Ronda 3 en curso</span></article>
   </div>
 </section>
 
@@ -506,7 +509,13 @@ footer small{font-family:var(--f-mono);font-size:.68rem;letter-spacing:.08em;col
   <div class="sec-head">
     <span class="eyebrow">Buscador de planetas · TESS</span>
     <h2 id="h-pla">Un planeta como la Tierra, <span class="ac-ok">encontrado a ciegas</span>. Y <span class="ac-sn">14 impostores</span></h2>
-    <p>Antes de buscar nada, el programa tuvo que encontrar solo los planetas de TOI-700, una enana roja del sur que TESS miró durante siete años. Recién después lo largamos sobre 300 enanas rojas cerca del polo sur de la eclíptica, la zona que TESS observa más tiempo. Cada señal pasó por un interrogatorio pensado para tumbarla.</p>
+    <p>Antes de buscar nada, el programa tuvo que encontrar solo los planetas de TOI-700, una enana roja del sur que TESS miró durante siete años. Recién después lo largamos sobre las enanas rojas cerca del polo sur de la eclíptica, la zona que TESS observa más tiempo: primero 300, después 1.849 en dos rondas, y ahora 3.462 más. Cada señal pasa por un interrogatorio pensado para tumbarla.</p>
+  </div>
+  <div class="modulos-proy rondas-pl">
+    <article><span class="n">PILOTO</span><h3>300 enanas rojas</h3><p>Las más brillantes, con QLP. 48 señales distintas, 5 ya conocidas, ninguna nueva en pie.</p><span class="estado e-etapa">Terminada</span></article>
+    <article><span class="n">RONDA 1</span><h3>906 con datos de 2 minutos</h3><p>Reencontró solo 19 planetas y candidatos conocidos. De 126 señales nuevas y 9.315 caídas sueltas, ninguna quedó en pie.</p><span class="estado e-etapa">Terminada</span></article>
+    <article><span class="n">RONDA 2</span><h3>943 más débiles</h3><p>De 424 señales periódicas y 7.407 caídas sueltas sobrevivió una: el candidato de unas 2,5 Tierras que se repite cada 11 días.</p><span class="estado e-activo">1 candidato en verificación</span></article>
+    <article><span class="n">RONDA 3</span><h3>3.462 enanas rojas más</h3><p>Entre 12 y 20 grados del polo sur de la eclíptica, con el mismo método y un planeta falso escondido en cada estrella para medir qué se escapa.</p><span class="estado e-activo">En curso</span></article>
   </div>
   <div class="pl-control" id="pl-control"></div>
   <p class="nota" id="pl-control-nota"></p>
@@ -546,6 +555,18 @@ footer small{font-family:var(--f-mono);font-size:.68rem;letter-spacing:.08em;col
     <h2 id="h-dia">Lo que hicimos y lo que descartamos</h2>
   </div>
   <ol class="diario" reversed>
+    <li><time datetime="2026-10-18T17:20-03:00">18 oct · 17:20</time>
+      <div class="body"><h3>Ronda 3: 3.462 enanas rojas más</h3>
+      <p>Ampliamos la búsqueda a las enanas rojas que están entre 12 y 20 grados del polo sur de la eclíptica: 3.462 estrellas nuevas, con las curvas de QLP y exactamente el mismo método que encontró al candidato. En cada estrella escondemos además un planeta falso para medir qué se nos escapa. Está en curso; cuando termine, publicamos el interrogatorio de cada señal.</p></div></li>
+    <li><time datetime="2026-10-18T15:00-03:00">18 oct · 15:00</time>
+      <div class="body"><h3>Prueba C: la sombra sale de nuestra estrella</h3>
+      <p>Restamos las imágenes de TESS de antes y de durante cada tránsito, sector por sector, para ver de qué punto del cielo sale la luz que falta. Antes calibramos el método: con un planeta confirmado ubica la caída sobre su estrella, y con un impostor conocido la ubica sobre la vecina que lo delató. Después escondimos 40 señales falsas en los datos reales: 20 en la vecina, con la profundidad que necesitaría para fingirlo todo, y 20 en nuestra estrella. El método las reconoce, y nuestra señal se parece a las de nuestra estrella; ninguna de las 20 de la vecina se le pareció. Todo apunta a un planeta, pero es evidencia estadística: falta mirar un tránsito con un telescopio en tierra. Este análisis también quedó sellado, encadenado al primero (bloque 972.040 de Bitcoin).</p></div></li>
+    <li><time datetime="2026-10-17T20:00-03:00">17 oct · 20:00</time>
+      <div class="body"><h3>Lo sellamos antes de contarlo</h3>
+      <p>Guardamos el análisis completo del candidato en un archivo y publicamos solo su huella SHA-256, anclada en la cadena de Bitcoin con OpenTimestamps (bloque 971.910). También lo prerregistramos en OSF, con embargo hasta abril de 2027, y mandamos un informe preliminar a ExoFOP, donde se siguen los candidatos de TESS. Cuando lo publiquemos, cualquiera va a poder comprobar que lo teníamos ese día. Desde ahora cada documento del proyecto lleva la autoría con ORCID.</p></div></li>
+    <li><time datetime="2026-10-17T12:00-03:00">17 oct · 12:00</time>
+      <div class="body"><h3>El candidato contra las simulaciones: se parece a un planeta real</h3>
+      <p>Pasamos la señal por TRICERATOPS, una herramienta que simula millones de escenarios (planeta, binaria, estrella vecina) y calcula cuál explica mejor lo que medimos: tres corridas de un millón de simulaciones. Da 7,3 % de falso positivo, o sea 93 % de ser un planeta. Para saber si eso es mucho, corrimos lo mismo con un planeta confirmado, que dio 7,0 %, y con dos impostores conocidos, que dieron 90,8 y 99,8 %. Nuestro candidato se parece al planeta. Pero para validarlo hace falta menos de 1,5 %, y con TESS solo ni el planeta confirmado llega. Con Gaia averiguamos quién es la vecina: una estrella de fondo, mucho más lejana, no una compañera. Probamos descartarla por la forma del tránsito, pero ese método falló con un impostor conocido y no lo usamos. Y corregimos un error propio: el tránsito dura 2,4 horas, no 1,5 como habíamos dicho.</p></div></li>
     <li><time datetime="2026-10-15T23:30-03:00">15 oct · 23:30</time>
       <div class="body"><h3>Segunda ronda de planetas: 943 enanas rojas más, y una señal que resiste</h3>
       <p>Revisamos las 943 enanas rojas de la lista que no tienen datos de 2 minutos, con las curvas de QLP. Son estrellas débiles: con estos datos solo se pueden ver planetas grandes. Antes de empezar encontramos un error propio que tiraba años enteros de datos sin avisar, y lo corregimos. De 424 señales periódicas, 125 tenían el período de la órbita del satélite: su huella, no planetas. La prueba más fuerte fue mirar las mismas horas en otra reducción independiente, TARS: 29 señales desaparecían ahí. De 7.407 caídas sueltas no quedó ninguna; la más convincente venía de una estrella vecina, como mostraron los píxeles. Queda una señal que pasó todas nuestras pruebas y que ven cinco reducciones distintas: si fuera un planeta, mediría unas 2,5 Tierras y daría una vuelta cada 11 días. Pero a 7,7 segundos de arco hay una estrella más débil que TESS no puede separar, y que podría producirla. No la publicamos todavía: primero hay que descartar a esa vecina.</p></div></li>

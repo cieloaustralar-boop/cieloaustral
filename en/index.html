@@ -268,6 +268,9 @@ footer small{font-family:var(--f-mono);font-size:.68rem;letter-spacing:.08em;col
 .modulos-proy .n{font-family:var(--f-mono);font-size:.7rem;letter-spacing:.16em;color:var(--ice)}
 .modulos-proy h3{font-family:var(--f-display);font-size:1.05rem;letter-spacing:.05em;text-transform:uppercase;line-height:1.3}
 .modulos-proy p{color:var(--muted);font-size:.93rem}
+.rondas-pl{grid-template-columns:repeat(4,minmax(0,1fr))}
+@media (max-width:1000px){.rondas-pl{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:560px){.rondas-pl{grid-template-columns:minmax(0,1fr)}}
 .modulos-proy .estado{justify-self:start;font-family:var(--f-mono);font-size:.66rem;letter-spacing:.14em;text-transform:uppercase;padding:4px 9px;border:1px solid currentColor}
 .e-activo{color:var(--conf)} .e-etapa{color:var(--cand)} .e-estudio{color:var(--ice)} .e-pausa{color:var(--dim)}
 
@@ -459,7 +462,7 @@ footer small{font-family:var(--f-mono);font-size:.68rem;letter-spacing:.08em;col
   <div class="modulos-proy">
     <article><span class="n">01</span><h3>Supernova hunter</h3><p>Stellar explosions in the southern sky, checked against the world registry before we announce them.</p><span class="estado e-activo">Active</span></article>
     <article><span class="n">02</span><h3>Orbital anomalies</h3><p>Asteroids and comets that are not where their orbit says. Observation errors are ruled out first.</p><span class="estado e-etapa">Stage 1 done</span></article>
-    <article><span class="n">03</span><h3>Planet finder</h3><p>Planet transits in TESS satellite data, around southern red dwarfs. First it had to find known planets on its own.</p><span class="estado e-etapa">Stage 1 done</span></article>
+    <article><span class="n">03</span><h3>Planet finder</h3><p>Planet transits in TESS satellite data, around southern red dwarfs. It has checked 1,849, left one candidate under verification, and is now working on 3,462 more.</p><span class="estado e-activo">Round 3 running</span></article>
   </div>
 </section>
 
@@ -506,7 +509,13 @@ footer small{font-family:var(--f-mono);font-size:.68rem;letter-spacing:.08em;col
   <div class="sec-head">
     <span class="eyebrow">Planet finder · TESS</span>
     <h2 id="h-pla">An Earth-like planet, <span class="ac-ok">found blind</span>. And <span class="ac-sn">14 impostors</span></h2>
-    <p>Before searching for anything, the program had to find the planets of TOI-700 on its own: a southern red dwarf that TESS watched for seven years. Only then did we run it on 300 red dwarfs near the southern ecliptic pole, the region TESS observes the longest. Every signal went through an interrogation designed to knock it down.</p>
+    <p>Before searching for anything, the program had to find the planets of TOI-700 on its own: a southern red dwarf that TESS watched for seven years. Only then did we run it on the red dwarfs near the southern ecliptic pole, the region TESS observes the longest: first 300, then 1,849 in two rounds, and now 3,462 more. Every signal goes through an interrogation designed to knock it down.</p>
+  </div>
+  <div class="modulos-proy rondas-pl">
+    <article><span class="n">PILOT</span><h3>300 red dwarfs</h3><p>The brightest ones, with QLP. 48 distinct signals, 5 already known, no new one left standing.</p><span class="estado e-etapa">Done</span></article>
+    <article><span class="n">ROUND 1</span><h3>906 with 2-minute data</h3><p>It recovered 19 known planets and candidates on its own. Of 126 new signals and 9,315 single dips, none was left standing.</p><span class="estado e-etapa">Done</span></article>
+    <article><span class="n">ROUND 2</span><h3>943 fainter ones</h3><p>Of 424 periodic signals and 7,407 single dips, one survived: the candidate of about 2.5 Earths that repeats every 11 days.</p><span class="estado e-activo">1 candidate under verification</span></article>
+    <article><span class="n">ROUND 3</span><h3>3,462 more red dwarfs</h3><p>Between 12 and 20 degrees from the south ecliptic pole, with the same method and a fake planet hidden in every star to measure what slips through.</p><span class="estado e-activo">Running</span></article>
   </div>
   <div class="pl-control" id="pl-control"></div>
   <p class="nota" id="pl-control-nota"></p>
@@ -546,6 +555,18 @@ footer small{font-family:var(--f-mono);font-size:.68rem;letter-spacing:.08em;col
     <h2 id="h-dia">What we did and what we ruled out</h2>
   </div>
   <ol class="diario" reversed>
+    <li><time datetime="2026-10-18T17:20-03:00">18 Oct · 17:20</time>
+      <div class="body"><h3>Round 3: 3,462 more red dwarfs</h3>
+      <p>We extended the search to the red dwarfs between 12 and 20 degrees from the south ecliptic pole: 3,462 new stars, with QLP light curves and exactly the same method that found the candidate. In every star we also hide a fake planet to measure what slips through. It is running; when it finishes we will publish the interrogation of every signal.</p></div></li>
+    <li><time datetime="2026-10-18T15:00-03:00">18 Oct · 15:00</time>
+      <div class="body"><h3>Test C: the shadow comes from our star</h3>
+      <p>We subtracted the TESS images taken before and during each transit, sector by sector, to see which point of the sky the missing light comes from. First we calibrated the method: with a confirmed planet it places the dip on its star, and with a known impostor it places it on the neighbour that gave it away. Then we hid 40 fake signals in the real data: 20 on the neighbour, with the depth it would need to fake everything, and 20 on our star. The method recognises them, and our signal looks like the ones on our star; none of the 20 on the neighbour resembled it. Everything points to a planet, but this is statistical evidence: a transit still has to be watched with a telescope on the ground. This analysis was sealed too, chained to the first one (Bitcoin block 972,040).</p></div></li>
+    <li><time datetime="2026-10-17T20:00-03:00">17 Oct · 20:00</time>
+      <div class="body"><h3>We sealed it before telling</h3>
+      <p>We stored the complete analysis of the candidate in a file and published only its SHA-256 fingerprint, anchored in the Bitcoin blockchain with OpenTimestamps (block 971,910). We also preregistered it on OSF, under embargo until April 2027, and sent a preliminary report to ExoFOP, where TESS candidates are followed up. When we publish it, anyone will be able to check that we had it that day. From now on every project document carries authorship with ORCID.</p></div></li>
+    <li><time datetime="2026-10-17T12:00-03:00">17 Oct · 12:00</time>
+      <div class="body"><h3>The candidate against the simulations: it looks like a real planet</h3>
+      <p>We ran the signal through TRICERATOPS, a tool that simulates millions of scenarios (planet, binary, neighbouring star) and works out which one best explains what we measured: three runs of one million simulations. It gives a 7.3% false-positive probability, that is, 93% of being a planet. To know whether that is a lot, we ran the same with a confirmed planet, which gave 7.0%, and with two known impostors, which gave 90.8 and 99.8%. Our candidate looks like the planet. But validation needs less than 1.5%, and with TESS alone not even the confirmed planet gets there. With Gaia we found out who the neighbour is: a background star, much farther away, not a companion. We tried to rule it out from the shape of the transit, but that method failed with a known impostor, so we do not use it. And we fixed a mistake of our own: the transit lasts 2.4 hours, not 1.5 as we had said.</p></div></li>
     <li><time datetime="2026-10-15T23:30-03:00">15 Oct · 23:30</time>
       <div class="body"><h3>Second planet round: 943 more red dwarfs, and one signal that holds up</h3>
       <p>We went through the 943 red dwarfs on the list that have no 2-minute data, using QLP light curves. These are faint stars: with these data only large planets can be seen. Before starting we found a mistake of our own that was silently dropping whole years of data, and we fixed it. Of 424 periodic signals, 125 had the period of the satellite's orbit: its fingerprint, not planets. The strongest test was looking at the same hours in another independent reduction, TARS: 29 signals vanished there. Of 7,407 single dips none survived; the most convincing one came from a neighboring star, as the pixels showed. One signal is left that passed all our tests and is seen by five different reductions: if it were a planet, it would be about 2.5 Earths across and orbit every 11 days. But 7.7 arcseconds away there is a fainter star that TESS cannot separate, and that could produce it. We are not publishing it yet: first that neighbor has to be ruled out.</p></div></li>
