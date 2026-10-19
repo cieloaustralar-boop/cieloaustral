@@ -462,7 +462,7 @@ footer small{font-family:var(--f-mono);font-size:.68rem;letter-spacing:.08em;col
   <div class="modulos-proy">
     <article><span class="n">01</span><h3>Supernova hunter</h3><p>Stellar explosions in the southern sky, checked against the world registry before we announce them.</p><span class="estado e-activo">Active</span></article>
     <article><span class="n">02</span><h3>Orbital anomalies</h3><p>Asteroids and comets that are not where their orbit says. Observation errors are ruled out first.</p><span class="estado e-etapa">Stage 1 done</span></article>
-    <article><span class="n">03</span><h3>Planet finder</h3><p>Planet transits in TESS satellite data, around southern red dwarfs. It has checked 1,849, left one candidate under verification, and is now working on 3,462 more.</p><span class="estado e-activo">Round 3 running</span></article>
+    <article><span class="n">03</span><h3>Planet finder</h3><p>Planet transits in TESS satellite data, around southern red dwarfs. It has checked 5,311 in three rounds and left one candidate under verification.</p><span class="estado e-activo">Candidate under verification</span></article>
   </div>
 </section>
 
@@ -509,13 +509,13 @@ footer small{font-family:var(--f-mono);font-size:.68rem;letter-spacing:.08em;col
   <div class="sec-head">
     <span class="eyebrow">Planet finder · TESS</span>
     <h2 id="h-pla">An Earth-like planet, <span class="ac-ok">found blind</span>. And <span class="ac-sn">14 impostors</span></h2>
-    <p>Before searching for anything, the program had to find the planets of TOI-700 on its own: a southern red dwarf that TESS watched for seven years. Only then did we run it on the red dwarfs near the southern ecliptic pole, the region TESS observes the longest: first 300, then 1,849 in two rounds, and now 3,462 more. Every signal goes through an interrogation designed to knock it down.</p>
+    <p>Before searching for anything, the program had to find the planets of TOI-700 on its own: a southern red dwarf that TESS watched for seven years. Only then did we run it on the red dwarfs near the southern ecliptic pole, the region TESS observes the longest: first 300, then 1,849 in two rounds, and finally 3,462 more. Every signal goes through an interrogation designed to knock it down.</p>
   </div>
   <div class="modulos-proy rondas-pl">
     <article><span class="n">PILOT</span><h3>300 red dwarfs</h3><p>The brightest ones, with QLP. 48 distinct signals, 5 already known, no new one left standing.</p><span class="estado e-etapa">Done</span></article>
     <article><span class="n">ROUND 1</span><h3>906 with 2-minute data</h3><p>It recovered 19 known planets and candidates on its own. Of 126 new signals and 9,315 single dips, none was left standing.</p><span class="estado e-etapa">Done</span></article>
     <article><span class="n">ROUND 2</span><h3>943 fainter ones</h3><p>Of 424 periodic signals and 7,407 single dips, one survived: the candidate of about 2.5 Earths that repeats every 11 days.</p><span class="estado e-activo">1 candidate under verification</span></article>
-    <article><span class="n">ROUND 3</span><h3>3,462 more red dwarfs</h3><p>Between 12 and 20 degrees from the south ecliptic pole, with the same method and a fake planet hidden in every star to measure what slips through.</p><span class="estado e-activo">Running</span></article>
+    <article><span class="n">ROUND 3</span><h3>3,462 more red dwarfs</h3><p>It recovered 18 known planets and candidates. Of 681 periodic signals and 15,349 single dips, no new candidate came out; 9 weak ones remain unconfirmed.</p><span class="estado e-etapa">Finished</span></article>
   </div>
   <div class="pl-control" id="pl-control"></div>
   <p class="nota" id="pl-control-nota"></p>
@@ -555,6 +555,12 @@ footer small{font-family:var(--f-mono);font-size:.68rem;letter-spacing:.08em;col
     <h2 id="h-dia">What we did and what we ruled out</h2>
   </div>
   <ol class="diario" reversed>
+    <li><time datetime="2026-10-19T14:45-03:00">19 Oct · 14:45</time>
+      <div class="body"><h3>Round 3 finished: no new planet</h3>
+      <p>Round 3 is over: 3,457 red dwarfs with data. The program recovered 18 already known planets and candidates, including those of L 98-59 and TOI-270, so the method works. But out of 681 repeating signals and 15,349 single dips, no new candidate came out. The strongest one, a 0.9% dip every 23 hours, turned out to be a double star: it has a second eclipse halfway through the orbit that a planet of that size cannot produce. Another was too large to be a planet, and another changed depth over the years, so the light came from a neighboring star. Nine weak signals remain unconfirmed: no other version of the data sees them. The fake planets we hid mark the limit: we found 22 in 100 of 3 Earth radii and almost none smaller.</p></div></li>
+    <li><time datetime="2026-10-19T14:40-03:00">19 Oct · 14:40</time>
+      <div class="body"><h3>A mistake of ours, fixed</h3>
+      <p>While testing the filter's rules on the known planets of round 3 we found that one of them threw out real planets when the signal is strong or has many transits: it was ruling out L 98-59 b and c and TOI-270 b. We fixed it, calibrated it on 18 known planets and ran round 2 again with the new rule. No planet had slipped through, and the candidate also passes the corrected rules. Everything is written down in the refutation log, mistakes included.</p></div></li>
     <li><time datetime="2026-10-18T17:20-03:00">18 Oct · 17:20</time>
       <div class="body"><h3>Round 3: 3,462 more red dwarfs</h3>
       <p>We extended the search to the red dwarfs between 12 and 20 degrees from the south ecliptic pole: 3,462 new stars, with QLP light curves and exactly the same method that found the candidate. In every star we also hide a fake planet to measure what slips through. It is running; when it finishes we will publish the interrogation of every signal.</p></div></li>

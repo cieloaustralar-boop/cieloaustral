@@ -462,7 +462,7 @@ footer small{font-family:var(--f-mono);font-size:.68rem;letter-spacing:.08em;col
   <div class="modulos-proy">
     <article><span class="n">01</span><h3>Cazador de supernovas</h3><p>Explosiones estelares en el cielo del sur, comparadas con el registro mundial antes de anunciarlas.</p><span class="estado e-activo">Activo</span></article>
     <article><span class="n">02</span><h3>Anomalías orbitales</h3><p>Asteroides y cometas que no están donde dice su órbita. Primero se descartan los errores de observación.</p><span class="estado e-etapa">Etapa 1 lista</span></article>
-    <article><span class="n">03</span><h3>Buscador de planetas</h3><p>Tránsitos de planetas en datos del satélite TESS, alrededor de enanas rojas del sur. Ya revisó 1.849 y dejó un candidato en verificación; ahora va por 3.462 más.</p><span class="estado e-activo">Ronda 3 en curso</span></article>
+    <article><span class="n">03</span><h3>Buscador de planetas</h3><p>Tránsitos de planetas en datos del satélite TESS, alrededor de enanas rojas del sur. Ya revisó 5.311 en tres rondas y dejó un candidato en verificación.</p><span class="estado e-activo">Candidato en verificación</span></article>
   </div>
 </section>
 
@@ -509,13 +509,13 @@ footer small{font-family:var(--f-mono);font-size:.68rem;letter-spacing:.08em;col
   <div class="sec-head">
     <span class="eyebrow">Buscador de planetas · TESS</span>
     <h2 id="h-pla">Un planeta como la Tierra, <span class="ac-ok">encontrado a ciegas</span>. Y <span class="ac-sn">14 impostores</span></h2>
-    <p>Antes de buscar nada, el programa tuvo que encontrar solo los planetas de TOI-700, una enana roja del sur que TESS miró durante siete años. Recién después lo largamos sobre las enanas rojas cerca del polo sur de la eclíptica, la zona que TESS observa más tiempo: primero 300, después 1.849 en dos rondas, y ahora 3.462 más. Cada señal pasa por un interrogatorio pensado para tumbarla.</p>
+    <p>Antes de buscar nada, el programa tuvo que encontrar solo los planetas de TOI-700, una enana roja del sur que TESS miró durante siete años. Recién después lo largamos sobre las enanas rojas cerca del polo sur de la eclíptica, la zona que TESS observa más tiempo: primero 300, después 1.849 en dos rondas y por último 3.462 más. Cada señal pasa por un interrogatorio pensado para tumbarla.</p>
   </div>
   <div class="modulos-proy rondas-pl">
     <article><span class="n">PILOTO</span><h3>300 enanas rojas</h3><p>Las más brillantes, con QLP. 48 señales distintas, 5 ya conocidas, ninguna nueva en pie.</p><span class="estado e-etapa">Terminada</span></article>
     <article><span class="n">RONDA 1</span><h3>906 con datos de 2 minutos</h3><p>Reencontró solo 19 planetas y candidatos conocidos. De 126 señales nuevas y 9.315 caídas sueltas, ninguna quedó en pie.</p><span class="estado e-etapa">Terminada</span></article>
     <article><span class="n">RONDA 2</span><h3>943 más débiles</h3><p>De 424 señales periódicas y 7.407 caídas sueltas sobrevivió una: el candidato de unas 2,5 Tierras que se repite cada 11 días.</p><span class="estado e-activo">1 candidato en verificación</span></article>
-    <article><span class="n">RONDA 3</span><h3>3.462 enanas rojas más</h3><p>Entre 12 y 20 grados del polo sur de la eclíptica, con el mismo método y un planeta falso escondido en cada estrella para medir qué se escapa.</p><span class="estado e-activo">En curso</span></article>
+    <article><span class="n">RONDA 3</span><h3>3.462 enanas rojas más</h3><p>Reencontró 18 planetas y candidatos conocidos. De 681 señales periódicas y 15.349 caídas sueltas no salió ningún candidato nuevo; quedan 9 débiles sin confirmar.</p><span class="estado e-etapa">Terminada</span></article>
   </div>
   <div class="pl-control" id="pl-control"></div>
   <p class="nota" id="pl-control-nota"></p>
@@ -555,6 +555,12 @@ footer small{font-family:var(--f-mono);font-size:.68rem;letter-spacing:.08em;col
     <h2 id="h-dia">Lo que hicimos y lo que descartamos</h2>
   </div>
   <ol class="diario" reversed>
+    <li><time datetime="2026-10-19T14:45-03:00">19 oct · 14:45</time>
+      <div class="body"><h3>Ronda 3 terminada: ningún planeta nuevo</h3>
+      <p>Terminó la ronda 3: 3.457 enanas rojas con datos. El programa reencontró 18 planetas y candidatos ya conocidos, entre ellos los de L 98-59 y TOI-270, así que el método funciona. Pero de 681 señales que se repetían y 15.349 caídas sueltas no salió ningún candidato nuevo. La más fuerte, una caída del 0,9 % cada 23 horas, resultó ser una estrella doble: tiene un segundo eclipse a mitad de órbita que un planeta de ese tamaño no puede producir. Otra era demasiado grande para ser un planeta, y otra cambiaba de profundidad con los años, así que la luz venía de una estrella vecina. Quedan 9 señales débiles sin confirmar: ninguna otra versión de los datos las ve. Los planetas falsos que escondimos marcan el límite: encontramos 22 de cada 100 de 3 Tierras y casi ninguno más chico.</p></div></li>
+    <li><time datetime="2026-10-19T14:40-03:00">19 oct · 14:40</time>
+      <div class="body"><h3>Un error nuestro, corregido</h3>
+      <p>Al probar las reglas del filtro con los planetas conocidos de la ronda 3 encontramos que una de ellas tiraba planetas reales cuando la señal es fuerte o tiene muchos tránsitos: descartaba a L 98-59 b y c y a TOI-270 b. La corregimos, la calibramos con 18 planetas conocidos y volvimos a pasar la ronda 2 con la regla nueva. No se nos había escapado ningún planeta, y el candidato pasa también las reglas corregidas. Todo queda anotado en el registro de refutaciones, errores incluidos.</p></div></li>
     <li><time datetime="2026-10-18T17:20-03:00">18 oct · 17:20</time>
       <div class="body"><h3>Ronda 3: 3.462 enanas rojas más</h3>
       <p>Ampliamos la búsqueda a las enanas rojas que están entre 12 y 20 grados del polo sur de la eclíptica: 3.462 estrellas nuevas, con las curvas de QLP y exactamente el mismo método que encontró al candidato. En cada estrella escondemos además un planeta falso para medir qué se nos escapa. Está en curso; cuando termine, publicamos el interrogatorio de cada señal.</p></div></li>
