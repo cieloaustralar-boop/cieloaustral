@@ -304,6 +304,7 @@ footer small{font-family:var(--f-mono);font-size:.68rem;letter-spacing:.08em;col
 .seguinos{display:grid;gap:22px;justify-items:start;padding-block:clamp(64px,10vw,120px);border-top:1px solid var(--line)}
 .seguinos h2{font-family:var(--f-display);font-size:clamp(1.5rem,3.4vw,2.6rem);text-transform:uppercase;letter-spacing:.04em;line-height:1.2}
 .seguinos p{color:var(--muted);max-width:60ch}
+.redes-btns{display:flex;flex-wrap:wrap;gap:14px}
 .leccion{border-left:2px solid var(--ice);padding:6px 0 6px 18px;font-size:1.1rem;font-weight:300;max-width:62ch}
 .pl-control{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,13rem),1fr));gap:2px;background:var(--line);border:1px solid var(--line)}
 .pl-control article{background:var(--void);padding:22px;display:grid;gap:8px;align-content:start;min-width:0}
@@ -428,6 +429,7 @@ footer small{font-family:var(--f-mono);font-size:.68rem;letter-spacing:.08em;col
       <li><a href="#datos">Data</a></li>
       <li><a class="idioma" href="../" hreflang="es" lang="es" title="Versión en castellano">ES</a></li>
       <li><a class="ig" href="https://www.instagram.com/cieloaustral.ar/" target="_blank" rel="noopener"><svg class="ig-ico" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="3" y="3" width="18" height="18" rx="5" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="12" r="4.2" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="17.3" cy="6.7" r="1.3" fill="currentColor"/></svg>Instagram</a></li>
+      <li><a class="ig" href="https://www.youtube.com/@CIELOAUSTRAL-AR" target="_blank" rel="noopener"><svg class="ig-ico" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="2.5" y="5" width="19" height="14" rx="4" fill="none" stroke="currentColor" stroke-width="2"/><path d="M10 9.2v5.6l4.8-2.8z" fill="currentColor"/></svg>YouTube</a></li>
     </ul>
     <button class="menu-btn" id="menu-btn" aria-expanded="false" aria-controls="menu">Menu</button>
   </div>
@@ -879,8 +881,9 @@ footer small{font-family:var(--f-mono);font-size:.68rem;letter-spacing:.08em;col
 <section class="wrap seguinos" id="seguinos" aria-labelledby="h-seg">
   <span class="eyebrow">Social</span>
   <h2 id="h-seg">Follow the search <span class="ac-sn">live</span></h2>
-  <p>Every round, every mistake and every rejection, told in reels and carousels with the project's real data (in Spanish).</p>
-  <a class="btn" href="https://www.instagram.com/cieloaustral.ar/" target="_blank" rel="noopener"><span class="ig"><svg class="ig-ico" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="3" y="3" width="18" height="18" rx="5" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="12" r="4.2" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="17.3" cy="6.7" r="1.3" fill="currentColor"/></svg>@cieloaustral.ar</span></a>
+  <p>Every round, every mistake and every rejection, told in reels and carousels with the project's real data. And on YouTube, the full follow-up: every test, every telescope and the verdict (in Spanish).</p>
+  <div class="redes-btns"><a class="btn" href="https://www.instagram.com/cieloaustral.ar/" target="_blank" rel="noopener"><span class="ig"><svg class="ig-ico" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="3" y="3" width="18" height="18" rx="5" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="12" r="4.2" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="17.3" cy="6.7" r="1.3" fill="currentColor"/></svg>@cieloaustral.ar</span></a>
+  <a class="btn" href="https://www.youtube.com/@CIELOAUSTRAL-AR" target="_blank" rel="noopener"><span class="ig"><svg class="ig-ico" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="2.5" y="5" width="19" height="14" rx="4" fill="none" stroke="currentColor" stroke-width="2"/><path d="M10 9.2v5.6l4.8-2.8z" fill="currentColor"/></svg>YouTube</span></a></div>
 </section>
 
 <footer class="wrap">
@@ -897,7 +900,7 @@ fetch("https://cieloaustral.goatcounter.com/counter/TOTAL.json")
   .catch(() => {});
 </script>
 
-  <ul><li><a href="#observatorio">Observatory</a></li><li><a href="#candidatos">Candidates</a></li><li><a href="#diario">Log</a></li><li><a href="https://alerce.online" target="_blank" rel="noopener">ALeRCE</a></li><li><a href="https://www.wis-tns.org" target="_blank" rel="noopener">TNS</a></li><li><a class="ig" href="https://www.instagram.com/cieloaustral.ar/" target="_blank" rel="noopener"><svg class="ig-ico" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="3" y="3" width="18" height="18" rx="5" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="12" r="4.2" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="17.3" cy="6.7" r="1.3" fill="currentColor"/></svg>Instagram</a></li></ul>
+  <ul><li><a href="#observatorio">Observatory</a></li><li><a href="#candidatos">Candidates</a></li><li><a href="#diario">Log</a></li><li><a href="https://alerce.online" target="_blank" rel="noopener">ALeRCE</a></li><li><a href="https://www.wis-tns.org" target="_blank" rel="noopener">TNS</a></li><li><a class="ig" href="https://www.instagram.com/cieloaustral.ar/" target="_blank" rel="noopener"><svg class="ig-ico" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="3" y="3" width="18" height="18" rx="5" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="12" r="4.2" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="17.3" cy="6.7" r="1.3" fill="currentColor"/></svg>Instagram</a></li><li><a class="ig" href="https://www.youtube.com/@CIELOAUSTRAL-AR" target="_blank" rel="noopener"><svg class="ig-ico" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="2.5" y="5" width="19" height="14" rx="4" fill="none" stroke="currentColor" stroke-width="2"/><path d="M10 9.2v5.6l4.8-2.8z" fill="currentColor"/></svg>YouTube</a></li></ul>
   <p class="autor">NS · <a href="https://orcid.org/0009-0006-5635-749X" target="_blank" rel="noopener">ORCID 0009-0006-5635-749X</a></p>
   <small>Cielo Austral · 2026 · independent project, built with AI assistance. The landscapes are code-generated illustrations and the planet and observatory shots are AI-generated artistic renderings; the telescope images, the light curves and the stars are real data. The listed objects are candidates until independent confirmation says otherwise.</small>
 </footer>
