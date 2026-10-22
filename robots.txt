@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://cieloaustral.space/sitemap.xml
